@@ -8,13 +8,21 @@ import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
   return (
+    
     <BrowserRouter>
-      <Sidebar />
-       <Navbar />
-       <Routes>
+       <div class="home">
+        <div class="page-wrapper">
+          <h1 class="d-none">Wolmart - Responsive Marketplace HTML Template</h1>
+          <main class="main d-flex">
+          <Sidebar />
+          <Navbar />
+          </main>
+        </div>
+        {/* <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='about' element={<About /> }></Route>
-       </Routes>
+        </Routes> */}
+       </div>
     </BrowserRouter>
   );
 }
