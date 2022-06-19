@@ -1,29 +1,28 @@
-import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home/Home';
-import About from './components/About/About';
-import Sidebar from './components/Sidebar/Sidebar';
-
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Header from './components/header/header';
+import Content from './components/home/mainContent/content';
+import StrickyFooter from './components/home/StickyFooter';
+import ScrollTop from './components/home/ScrollTop';
+import NewslatterPopup from './components/home/NewslatterPopup';
+import Sidebar from './components/home/Sidebar';
 function App() {
   return (
-    
-    <BrowserRouter>
-       <div class="home">
-        <div class="page-wrapper">
-          <h1 class="d-none">Wolmart - Responsive Marketplace HTML Template</h1>
-          <main class="main d-flex">
-          <Sidebar />
-          <Navbar />
+    <div className="App">
+        <BrowserRouter>
+          <div className="page-wrapper">
+          <h1 className="d-none">hbm bazar</h1>
+          <main className="main d-flex">
+              <Sidebar />
+              <Content />
           </main>
-        </div>
-        {/* <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='about' element={<About /> }></Route>
-        </Routes> */}
-       </div>
-    </BrowserRouter>
+          </div>
+          <StrickyFooter />
+          <ScrollTop />
+          <NewslatterPopup />
+        </BrowserRouter>
+    </div>
   );
 }
 
